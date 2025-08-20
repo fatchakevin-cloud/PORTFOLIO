@@ -1,126 +1,241 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - Fatcha Zehi Serge Éric Kevin</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Zehi Serge Éric - Développeur Web & Expert Cybersécurité | Portfolio</title>
+    <meta name="description" content="Portfolio de Zehi Serge Éric Kevin Fatcha, développeur web passionné et expert en cybersécurité basé à Abidjan.">
+    <meta name="author" content="Zehi Serge Éric Kevin Fatcha">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <nav id="navbar">
+        <div class="container nav-container">
+            <div class="logo">Zehi <span>Serge</span></div>
+            <div class="nav-links">
+                <a href="#hero">Accueil</a>
+                <a href="#about">À Propos</a>
+                <a href="#skills">Compétences</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <button class="mobile-nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
 
-  <header>
-    <div class="container">
-      <h1>Fatcha Zehi Serge Éric Kevin</h1>
-      <h2>Étudiant en Cybersécurité | Développeur Web</h2>
-      <nav>
-        <ul>
-          <li><a href="#about">À propos</a></li>
-          <li><a href="#skills">Compétences</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <!-- HERO -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Bonjour, je suis <span>Zehi Serge</span></h1>
+                <div class="typewriter">
+                    <span id="typewriter-text">Développeur Web & Expert Cybersécurité</span>
+                </div>
+                <p>Passionné par les technologies innovantes et la sécurité informatique, je crée des solutions web performantes et sécurisées pour répondre aux défis numériques d'aujourd'hui.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fas fa-paper-plane"></i> Me Contacter
+                    </a>
+                    <a href="files/Zehi_Serge_CV.pdf.pdf" class="btn btn-outline" download>
+                        <i class="fas fa-download"></i> Télécharger CV
+                    </a>
+                </div>
+                <div class="hero-info">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>fatchakevin@gmail.com</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <span>‪‪+225 0702052578‬‬</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Abidjan, Côte d'Ivoire</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section id="hero" class="hero">
-    <div class="container">
-      <h2>Bienvenue sur mon Portfolio</h2>
-      <p>Découvrez mes projets, mes compétences et mon parcours en cybersécurité et développement web.</p>
-    </div>
-  </section>
+    <!-- À PROPOS -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>À Propos de Moi</h2>
+                <p>Découvrez mon parcours, mes passions et ce qui me motive dans le monde de la technologie</p>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/zehi_serge_eric.jpg" alt="Zehi Serge Eric">
+                    <div class="about-badge"><i class="fas fa-user-secret"></i></div>
+                </div>
+                <div class="about-text">
+                    <h3>Zehi Serge Éric Kevin Fatcha</h3>
+                    <p class="title">Développeur Web & Expert Cybersécurité</p>
+                    <div class="about-details">
+                        <p><strong>Localisation:</strong> Cocody Rivera Palmeraie, Abidjan</p>
+                        <p><strong>Nationalité:</strong> Ivoirienne</p>
+                        <p><strong>Email:</strong> fatchakevin@gmail.com</p>
+                        <p><strong>Téléphone:</strong> ‪‪+225 0702052578‬‬</p>
+                    </div>
+                    <p>Passionné par les technologies de l'information et la programmation, je possède une solide formation en cybersécurité. Motivé à développer des solutions web innovantes et sécurisées, je cherche à appliquer mes connaissances techniques dans un environnement dynamique.</p>
+                    <div class="languages">
+                        <h4>Langues</h4>
+                        <p>Français (Courant), Anglais (Intermédiaire)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section id="about" class="about">
-    <div class="container">
-      <h2>À propos de moi</h2>
-      <p>
-        Je suis <strong>Fatcha Zehi Serge Éric Kevin</strong>, passionné par la cybersécurité et le développement web.
-        Actuellement étudiant en Licence 1 de Cybersécurité à Global Digital School, je maîtrise le HTML, CSS, JavaScript et Python.
-      </p>
-    </div>
-  </section>
+    <!-- COMPÉTENCES -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-title">
+                <h2>Mes Compétences</h2>
+                <p>Un aperçu de mes compétences techniques et professionnelles</p>
+            </div>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Développement Web</h3>
+                    <div class="skill-item">
+                        <div class="skill-header"><span>HTML/CSS</span><span>95%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" data-width="95%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header"><span>JavaScript</span><span>90%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" data-width="90%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header"><span>React</span><span>85%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" data-width="85%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header"><span>Node.js</span><span>80%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" data-width="80%"></div></div>
+                    </div>
+                </div>
 
-  <section id="skills" class="skills">
-    <div class="container">
-      <div class="section-title">
-        <h2>Mes Compétences</h2>
-        <p>Un aperçu de mes compétences techniques et professionnelles</p>
-      </div>
-      <div class="skills-container">
-        <div class="skill-item">
-          <i class="fab fa-html5"></i>
-          <h4>HTML</h4>
-          <p>Structure et mise en place de pages web modernes.</p>
-        </div>
-        <div class="skill-item">
-          <i class="fab fa-css3-alt"></i>
-          <h4>CSS</h4>
-          <p>Stylisation responsive et animations modernes.</p>
-        </div>
-        <div class="skill-item">
-          <i class="fab fa-js"></i>
-          <h4>JavaScript</h4>
-          <p>Création d’interactions dynamiques et fonctionnalités avancées.</p>
-        </div>
-        <div class="skill-item">
-          <i class="fab fa-python"></i>
-          <h4>Python</h4>
-          <p>Automatisation, scripts et projets en cybersécurité.</p>
-        </div>
-        <div class="skill-item">
-          <i class="fas fa-shield-alt"></i>
-          <h4>Cybersécurité</h4>
-          <p>Analyse de vulnérabilités, sécurité réseau et bonnes pratiques.</p>
-        </div>
-        <div class="skill-item">
-          <i class="fas fa-database"></i>
-          <h4>Bases de données</h4>
-          <p>Conception, gestion et sécurisation des données.</p>
-        </div>
-        <div class="skill-item">
-          <i class="fas fa-project-diagram"></i>
-          <h4>Gestion de projets</h4>
-          <p>Organisation, planification et travail en équipe agile.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+                <div class="skill-category">
+                    <h3><i class="fas fa-shield-alt"></i> Cybersécurité</h3>
+                    <div class="skill-item">
+                        <div class="skill-header"><span>Analyse de vulnérabilités</span><span>90%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" data-width="90%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header"><span>Sécurité des applications</span><span>85%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" data-width="85%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header"><span>Tests d'intrusion</span><span>80%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" data-width="80%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header"><span>Gestion des risques</span><span>85%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" data-width="85%"></div></div>
+                    </div>
+                </div>
 
-  <section id="portfolio" class="portfolio">
-    <div class="container">
-      <h2>Mes Projets</h2>
-      <div class="portfolio-container">
-        <div class="portfolio-item">
-          <h4>Projet 1</h4>
-          <p>Application web sécurisée développée en Python et JavaScript.</p>
+                <div class="skill-category">
+                    <h3><i class="fas fa-server"></i> Autres Compétences</h3>
+                    <div class="skill-item">
+                        <div class="skill-header"><span>Python</span><span>85%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" data-width="85%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header"><span>Bases de données</span><span>80%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" data-width="80%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header"><span>Git & GitHub</span><span>90%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" data-width="90%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header"><span>DevOps</span><span>75%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" data-width="75%"></div></div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="portfolio-item">
-          <h4>Projet 2</h4>
-          <p>Site vitrine moderne en HTML, CSS et JavaScript.</p>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contactez-moi</h2>
+                <p>N'hésitez pas à me contacter pour discuter de projets ou d'opportunités</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>fatchakevin@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <div class="contact-details">
+                            <h4>Téléphone</h4>
+                            <p>+225 0702052578</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form action="https://formsubmit.co/fatchakevin@gmail.com" method="POST">
+                        <input type="text" name="name" placeholder="Nom complet" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <input type="text" name="subject" placeholder="Sujet" required>
+                        <textarea name="message" placeholder="Votre message" required></textarea>
+                        <input type="hidden" name="_next" value="https://fatchakevin-cloud.github.io/PORTFOLIO/merci.html">
+                        <input type="hidden" name="_captcha" value="false">
+                        <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Envoyer le message</button>
+                    </form>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="contact" class="contact">
-    <div class="container">
-      <h2>Contactez-moi</h2>
-      <form action="sendmail.php" method="POST">
-        <input type="text" name="name" placeholder="Votre nom" required>
-        <input type="email" name="email" placeholder="Votre email" required>
-        <textarea name="message" rows="5" placeholder="Votre message" required></textarea>
-        <button type="submit">Envoyer</button>
-      </form>
-    </div>
-  </section>
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">Zehi <span>Serge</span></div>
+                    <p>Développeur Web & Expert Cybersécurité passionné par la création de solutions innovantes et sécurisées.</p>
+                    <div class="footer-social">
+                        <a href="https://github.com/fatchakevin-cloud" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Liens rapides</h4>
+                    <ul>
+                        <li><a href="#hero">Accueil</a></li>
+                        <li><a href="#about">À Propos</a></li>
+                        <li><a href="#skills">Compétences</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Zehi Serge Éric. Suivez-moi sur <a href="https://github.com/fatchakevin-cloud" target="_blank">GitHub</a></p>
+            </div>
+        </div>
+    </footer>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Fatcha Zehi Serge Éric Kevin | Tous droits réservés.</p>
-    </div>
-  </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>
+
+
+
+
 
