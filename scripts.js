@@ -1,9 +1,7 @@
-// INITIALISATION EMAILJS
 (function(){
-    emailjs.init("YOUR_USER_ID"); // Remplace YOUR_USER_ID par ton User ID EmailJS
+    emailjs.init("YOUR_USER_ID"); 
 })();
 
-// Effet de machine à écrire
 document.addEventListener('DOMContentLoaded', function() {
     const typewriterText = document.getElementById('typewriter-text');
     const texts = ["Développeur Web & Expert Cybersécurité"];
@@ -21,13 +19,11 @@ document.addEventListener('DOMContentLoaded', function() {
     type();
 });
 
-// FORMULAIRE CONTACT
 const contactForm = document.getElementById('contactForm');
 
 contactForm.addEventListener('submit', function(e){
     e.preventDefault();
 
-    // Paramètres à envoyer
     const templateParams = {
         from_name: document.getElementById('name').value,
         from_email: document.getElementById('email').value,
@@ -35,7 +31,6 @@ contactForm.addEventListener('submit', function(e){
         message: document.getElementById('message').value
     };
 
-    // Envoyer via EmailJS
     emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
         .then(function(response) {
             alert("Message envoyé avec succès !");
