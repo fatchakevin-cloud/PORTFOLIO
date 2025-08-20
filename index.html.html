@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Zehi Serge Éric - Développeur Web & Expert Cybersécurité | Portfolio</title>
+    <meta name="description" content="Portfolio de Zehi Serge Éric Kevin Fatcha, développeur web passionné et expert en cybersécurité basé à Abidjan.">
+    <meta name="author" content="Zehi Serge Éric Kevin Fatcha">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav id="navbar">
+        <div class="container nav-container">
+            <div class="logo">Zehi <span>Serge</span></div>
+            <div class="nav-links">
+                <a href="#hero">Accueil</a>
+                <a href="#about">À Propos</a>
+                <a href="#skills">Compétences</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <button class="mobile-nav-toggle"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Bonjour, je suis <span>Zehi Serge</span></h1>
+                <div class="typewriter"><span id="typewriter-text">Développeur Web & Expert Cybersécurité</span></div>
+                <p>Passionné par les technologies innovantes et la sécurité informatique, je crée des solutions web performantes et sécurisées.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-outline"><i class="fas fa-paper-plane"></i> Me Contacter</a>
+                    <a href="files/Zehi_Serge_CV.pdf.pdf" class="btn btn-outline" download><i class="fas fa-download"></i> Télécharger CV</a>
+                </div>
+                <div class="hero-info">
+                    <div class="info-item"><i class="fas fa-envelope"></i> <span>fatchakevin@gmail.com</span></div>
+                    <div class="info-item"><i class="fas fa-phone"></i> <span>‪+225 0702052578‬</span></div>
+                    <div class="info-item"><i class="fas fa-map-marker-alt"></i> <span>Abidjan, Côte d'Ivoire</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- À PROPOS -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>À Propos de Moi</h2>
+                <p>Découvrez mon parcours, mes passions et ce qui me motive dans le monde de la technologie</p>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/zehi_serge_eric.jpg" alt="Zehi Serge Eric">
+                    <div class="about-badge"><i class="fas fa-user-secret"></i></div>
+                </div>
+                <div class="about-text">
+                    <h3>Zehi Serge Éric Kevin Fatcha</h3>
+                    <p class="title">Développeur Web & Expert Cybersécurité</p>
+                    <div class="about-details">
+                        <p><strong>Localisation:</strong> Cocody Rivera Palmeraie, Abidjan</p>
+                        <p><strong>Nationalité:</strong> Ivoirienne</p>
+                        <p><strong>Email:</strong> fatchakevin@gmail.com</p>
+                        <p><strong>Téléphone:</strong> ‪+225 0702052578‬</p>
+                    </div>
+                    <p>Motivé à développer des solutions web innovantes et sécurisées, je cherche à appliquer mes connaissances techniques dans un environnement dynamique.</p>
+                    <div class="languages">
+                        <h4>Langues</h4>
+                        <p>Français (Courant), Anglais (Intermédiaire)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPÉTENCES -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-title">
+                <h2>Mes Compétences</h2>
+                <p>Un aperçu de mes compétences techniques et professionnelles</p>
+            </div>
+            <div class="skills-container">
+                <!-- Tes compétences ici -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contactez-moi</h2>
+                <p>N'hésitez pas à me contacter pour discuter de projets ou d'opportunités</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item"><div class="contact-icon"><i class="fas fa-envelope"></i></div><div class="contact-details"><h4>Email</h4><p>fatchakevin@gmail.com</p></div></div>
+                    <div class="contact-item"><div class="contact-icon"><i class="fas fa-phone"></i></div><div class="contact-details"><h4>Téléphone</h4><p>+225 0702052578</p></div></div>
+                </div>
+
+                <!-- FORMULAIRE VIA FORMSUBMIT -->
+                <div class="contact-form">
+                    <form action="https://formsubmit.co/fatchakevin@gmail.com" method="POST">
+                        <input type="text" name="name" placeholder="Nom complet" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <input type="text" name="subject" placeholder="Sujet" required>
+                        <textarea name="message" placeholder="Votre message" required></textarea>
+
+                        <!-- Redirection après envoi et captcha désactivé -->
+                        <input type="hidden" name="_next" value="https://tonsite.github.io/">
+                        <input type="hidden" name="_captcha" value="false">
+
+                        <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Envoyer le message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">Zehi <span>Serge</span></div>
+                    <p>Développeur Web & Expert Cybersécurité passionné par la création de solutions innovantes et sécurisées.</p>
+                    <div class="footer-social">
+                        <a href="https://github.com/fatchakevin-cloud" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Liens rapides</h4>
+                    <ul>
+                        <li><a href="#hero">Accueil</a></li>
+                        <li><a href="#about">À Propos</a></li>
+                        <li><a href="#skills">Compétences</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Zehi Serge Éric. Suivez-moi sur <a href="https://github.com/fatchakevin-cloud" target="_blank">GitHub</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
