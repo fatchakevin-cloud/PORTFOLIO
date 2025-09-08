@@ -56,29 +56,6 @@
                 </button>
             </div>
             
-            <!-- Menu mobile -->
-            <div class="mobile-menu">
-                <a href="index.html" class="mobile-nav-link">
-                    <i class="fas fa-home"></i>
-                    <span>Accueil</span>
-                </a>
-                <a href="about.html" class="mobile-nav-link">
-                    <i class="fas fa-user"></i>
-                    <span>À Propos</span>
-                </a>
-                <a href="skills.html" class="mobile-nav-link">
-                    <i class="fas fa-cogs"></i>
-                    <span>Compétences</span>
-                </a>
-                <a href="projects.html" class="mobile-nav-link">
-                    <i class="fas fa-project-diagram"></i>
-                    <span>Projets</span>
-                </a>
-                <a href="contact.html" class="mobile-nav-link">
-                    <i class="fas fa-envelope"></i>
-                    <span>Contact</span>
-                </a>
-            </div>
         </div>
     </nav>
 
@@ -270,13 +247,13 @@
 
     <script src="scripts.js"></script>
     <script>
-        // Script mobile menu SIMPLE et DIRECT
+        // Script navigation IDENTIQUE sur mobile et PC
         document.addEventListener('DOMContentLoaded', function() {
             const menuBtn = document.querySelector('.mobile-nav-toggle');
-            const navMenu = document.querySelector('.mobile-menu');
+            const navMenu = document.querySelector('.nav-links');
             
             console.log('Menu button:', menuBtn);
-            console.log('Menu:', navMenu);
+            console.log('Navigation menu:', navMenu);
             
             if (menuBtn && navMenu) {
                 menuBtn.addEventListener('click', function() {
@@ -285,25 +262,22 @@
                     menuBtn.classList.toggle('active');
                     
                     if (navMenu.classList.contains('active')) {
-                        document.body.style.overflow = 'hidden';
-                        console.log('Menu opened');
+                        console.log('Navigation opened');
                     } else {
-                        document.body.style.overflow = '';
-                        console.log('Menu closed');
+                        console.log('Navigation closed');
                     }
                 });
                 
                 // Close menu when clicking on links
-                navMenu.querySelectorAll('.mobile-nav-link').forEach(link => {
+                navMenu.querySelectorAll('.nav-link').forEach(link => {
                     link.addEventListener('click', function() {
                         navMenu.classList.remove('active');
                         menuBtn.classList.remove('active');
-                        document.body.style.overflow = '';
-                        console.log('Menu closed by link click');
+                        console.log('Navigation closed by link click');
                     });
                 });
             } else {
-                console.error('Menu elements not found!');
+                console.error('Navigation elements not found!');
             }
         });
     </script>
