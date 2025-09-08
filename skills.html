@@ -56,29 +56,6 @@
                 </button>
             </div>
             
-            <!-- Menu mobile -->
-            <div class="mobile-menu">
-                <a href="index.html" class="mobile-nav-link">
-                    <i class="fas fa-home"></i>
-                    <span>Accueil</span>
-                </a>
-                <a href="about.html" class="mobile-nav-link">
-                    <i class="fas fa-user"></i>
-                    <span>À Propos</span>
-                </a>
-                <a href="skills.html" class="mobile-nav-link">
-                    <i class="fas fa-cogs"></i>
-                    <span>Compétences</span>
-                </a>
-                <a href="projects.html" class="mobile-nav-link">
-                    <i class="fas fa-project-diagram"></i>
-                    <span>Projets</span>
-                </a>
-                <a href="contact.html" class="mobile-nav-link">
-                    <i class="fas fa-envelope"></i>
-                    <span>Contact</span>
-                </a>
-            </div>
         </div>
     </nav>
 
@@ -183,26 +160,19 @@
         // Script mobile menu direct
         document.addEventListener('DOMContentLoaded', function() {
             const mobileToggle = document.querySelector('.mobile-nav-toggle');
-            const mobileMenu = document.querySelector('.mobile-menu');
+            const navMenu = document.querySelector('.nav-links');
             
-            if (mobileToggle && mobileMenu) {
+            if (mobileToggle && navMenu) {
                 mobileToggle.addEventListener('click', function() {
-                    mobileMenu.classList.toggle('active');
+                    navMenu.classList.toggle('active');
                     mobileToggle.classList.toggle('active');
-                    
-                    if (mobileMenu.classList.contains('active')) {
-                        document.body.style.overflow = 'hidden';
-                    } else {
-                        document.body.style.overflow = '';
-                    }
                 });
                 
                 // Close menu when clicking on links
-                mobileMenu.querySelectorAll('.mobile-nav-link').forEach(link => {
+                navMenu.querySelectorAll('.nav-link').forEach(link => {
                     link.addEventListener('click', function() {
-                        mobileMenu.classList.remove('active');
+                        navMenu.classList.remove('active');
                         mobileToggle.classList.remove('active');
-                        document.body.style.overflow = '';
                     });
                 });
             }

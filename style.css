@@ -3219,3 +3219,135 @@ img[data-src] {
         background: transparent !important;
     }
 }
+
+/* CSS MOBILE - Menu hamburger */
+@media (max-width: 768px) {
+    /* Menu hamburger - Visible sur mobile */
+    .mobile-nav-toggle {
+        display: flex !important;
+        flex-direction: column;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        cursor: pointer;
+        padding: 0.75rem;
+        gap: 0.25rem;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+
+    .mobile-nav-toggle:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: scale(1.05);
+    }
+
+    .hamburger-line {
+        width: 25px;
+        height: 3px;
+        background: var(--white);
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+
+    .mobile-nav-toggle:hover .hamburger-line {
+        background: var(--primary);
+        transform: scale(1.1);
+        box-shadow: 0 0 10px var(--primary);
+    }
+
+    .mobile-nav-toggle:hover .hamburger-line:nth-child(1) {
+        transform: translateY(-2px) scale(1.1);
+    }
+
+    .mobile-nav-toggle:hover .hamburger-line:nth-child(3) {
+        transform: translateY(2px) scale(1.1);
+    }
+
+    /* Navigation Mobile - Caché par défaut */
+    .nav-links {
+        display: none !important;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(10, 10, 10, 0.98);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        padding: 1rem;
+        border-top: 1px solid rgba(58, 134, 255, 0.2);
+        z-index: 1000;
+        gap: 0.5rem;
+    }
+
+    /* Navigation Mobile - Visible quand actif */
+    .nav-links.active {
+        display: flex !important;
+    }
+
+    .nav-link {
+        width: 100%;
+        justify-content: center;
+        padding: 1rem;
+        border-radius: 8px;
+        margin-bottom: 0.5rem;
+        color: var(--white) !important;
+    }
+
+    /* Cacher le bouton contact sur mobile */
+    .btn-contact {
+        display: none;
+    }
+
+    /* Cacher le sous-titre du logo sur mobile */
+    .logo-subtitle {
+        display: none;
+    }
+}
+
+/* ============================
+   Responsive Mobile
+============================ */
+@media (max-width: 768px) {
+    /* Cacher le menu par défaut */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 70%;
+        background: rgba(10, 10, 10, 0.95);
+        padding: 2rem 1.5rem;
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-2xl);
+        gap: 1.5rem;
+        text-align: right;
+    }
+
+    /* Quand actif */
+    .nav-links.active {
+        display: flex;
+        animation: slideDown 0.3s ease forwards;
+    }
+
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Bouton hamburger visible */
+    .mobile-nav-toggle {
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+        color: var(--white);
+        background: none;
+        border: none;
+        z-index: 1100;
+    }
+}

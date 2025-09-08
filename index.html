@@ -247,39 +247,15 @@
 
     <script src="scripts.js"></script>
     <script>
-        // Script navigation IDENTIQUE sur mobile et PC
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuBtn = document.querySelector('.mobile-nav-toggle');
-            const navMenu = document.querySelector('.nav-links');
-            
-            console.log('Menu button:', menuBtn);
-            console.log('Navigation menu:', navMenu);
-            
-            if (menuBtn && navMenu) {
-                menuBtn.addEventListener('click', function() {
-                    console.log('Menu clicked!');
-                    navMenu.classList.toggle('active');
-                    menuBtn.classList.toggle('active');
-                    
-                    if (navMenu.classList.contains('active')) {
-                        console.log('Navigation opened');
-                    } else {
-                        console.log('Navigation closed');
-                    }
-                });
-                
-                // Close menu when clicking on links
-                navMenu.querySelectorAll('.nav-link').forEach(link => {
-                    link.addEventListener('click', function() {
-                        navMenu.classList.remove('active');
-                        menuBtn.classList.remove('active');
-                        console.log('Navigation closed by link click');
-                    });
-                });
-            } else {
-                console.error('Navigation elements not found!');
-            }
-        });
+        // Script SIMPLE pour menu hamburger
+        const toggle = document.querySelector('.mobile-nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (toggle && navLinks) {
+            toggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        }
     </script>
 </body>
 </html>
