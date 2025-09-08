@@ -78,9 +78,8 @@
                 <div class="floating-db">DB</div>
             </div>
             <div class="hero-video-bg">
-                <video autoplay muted loop playsinline class="hero-video" onload="console.log('Video loaded')" onerror="console.log('Video error')">
-                    <source src="video-accueil/video inf.webm" type="video/webm">
-                    <source src="video-accueil/video inf.mp4" type="video/mp4">
+                <video autoplay muted loop playsinline preload="metadata" class="hero-video" poster="images/zehi_serge_eric.jpg">
+                    <source src="video-accueil/video-inf.mp4" type="video/mp4">
                     Votre navigateur ne supporte pas la lecture vidéo.
                 </video>
                 <div class="video-overlay"></div>
@@ -248,14 +247,34 @@
     <script src="scripts.js"></script>
     <script>
         // Script SIMPLE pour menu hamburger
-        const toggle = document.querySelector('.mobile-nav-toggle');
-        const navLinks = document.querySelector('.nav-links');
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggle = document.querySelector('.mobile-nav-toggle');
+            const navLinks = document.querySelector('.nav-links');
 
-        if (toggle && navLinks) {
-            toggle.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
-            });
-        }
+            if (toggle && navLinks) {
+                toggle.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    navLinks.classList.toggle('active');
+                    toggle.classList.toggle('active');
+                    
+                    // Empêcher le scroll du body quand le menu est ouvert
+                    if (navLinks.classList.contains('active')) {
+                        document.body.style.overflow = 'hidden';
+                    } else {
+                        document.body.style.overflow = '';
+                    }
+                });
+                
+                // Fermer le menu en cliquant sur un lien
+                navLinks.querySelectorAll('.nav-link').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navLinks.classList.remove('active');
+                        toggle.classList.remove('active');
+                        document.body.style.overflow = '';
+                    });
+                });
+            }
+        });
     </script>
 </body>
 </html>
