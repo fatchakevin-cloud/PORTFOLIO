@@ -270,31 +270,40 @@
 
     <script src="scripts.js"></script>
     <script>
-        // Script mobile menu direct
+        // Script mobile menu SIMPLE et DIRECT
         document.addEventListener('DOMContentLoaded', function() {
-            const mobileToggle = document.querySelector('.mobile-nav-toggle');
-            const mobileMenu = document.querySelector('.mobile-menu');
+            const menuBtn = document.querySelector('.mobile-nav-toggle');
+            const navMenu = document.querySelector('.mobile-menu');
             
-            if (mobileToggle && mobileMenu) {
-                mobileToggle.addEventListener('click', function() {
-                    mobileMenu.classList.toggle('active');
-                    mobileToggle.classList.toggle('active');
+            console.log('Menu button:', menuBtn);
+            console.log('Menu:', navMenu);
+            
+            if (menuBtn && navMenu) {
+                menuBtn.addEventListener('click', function() {
+                    console.log('Menu clicked!');
+                    navMenu.classList.toggle('active');
+                    menuBtn.classList.toggle('active');
                     
-                    if (mobileMenu.classList.contains('active')) {
+                    if (navMenu.classList.contains('active')) {
                         document.body.style.overflow = 'hidden';
+                        console.log('Menu opened');
                     } else {
                         document.body.style.overflow = '';
+                        console.log('Menu closed');
                     }
                 });
                 
                 // Close menu when clicking on links
-                mobileMenu.querySelectorAll('.mobile-nav-link').forEach(link => {
+                navMenu.querySelectorAll('.mobile-nav-link').forEach(link => {
                     link.addEventListener('click', function() {
-                        mobileMenu.classList.remove('active');
-                        mobileToggle.classList.remove('active');
+                        navMenu.classList.remove('active');
+                        menuBtn.classList.remove('active');
                         document.body.style.overflow = '';
+                        console.log('Menu closed by link click');
                     });
                 });
+            } else {
+                console.error('Menu elements not found!');
             }
         });
     </script>

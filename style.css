@@ -3079,23 +3079,23 @@ img[data-src] {
 
 /* Mobile Menu Styles */
 .mobile-menu {
-    display: none !important;
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: 100vh !important;
-    background: var(--dark) !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: center !important;
-    z-index: 9999 !important;
-    padding: 2rem !important;
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.8) !important;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--dark);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 2rem;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
 }
 
 .mobile-menu.active {
-    display: flex !important;
+    display: flex;
 }
 
 .mobile-nav-link {
@@ -3148,19 +3148,15 @@ img[data-src] {
         background-position: center !important;
     }
     
-    /* Hide video on mobile if it doesn't load */
+    /* Video fullscreen with object-fit: cover */
     .hero-video {
-        display: none !important;
-    }
-    
-    .hero-video {
-        position: absolute !important;
+        position: fixed !important;
         top: 0 !important;
         left: 0 !important;
-        width: 100vw !important;
-        height: 100vh !important;
+        width: 100% !important;
+        height: 100% !important;
         object-fit: cover !important;
-        z-index: -99998 !important;
+        z-index: -1 !important;
     }
     
     /* Force ALL other elements to be above video */
