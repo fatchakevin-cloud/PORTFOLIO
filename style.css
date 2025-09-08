@@ -3140,6 +3140,8 @@ img[data-src] {
         height: 100vh !important;
         z-index: -99999 !important;
         overflow: hidden !important;
+        /* Fallback background */
+        background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0d1117 100%) !important;
     }
     
     .hero-video {

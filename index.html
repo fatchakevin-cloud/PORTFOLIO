@@ -101,8 +101,9 @@
                 <div class="floating-db">DB</div>
             </div>
             <div class="hero-video-bg">
-                <video autoplay muted loop playsinline class="hero-video">
+                <video autoplay muted loop playsinline class="hero-video" onload="console.log('Video loaded')" onerror="console.log('Video error')">
                     <source src="video-accueil/video inf.mp4" type="video/mp4">
+                    <source src="video-accueil/video inf.webm" type="video/webm">
                     Votre navigateur ne supporte pas la lecture vidéo.
                 </video>
                 <div class="video-overlay"></div>
