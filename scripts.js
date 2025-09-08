@@ -52,7 +52,7 @@ function initLazyLoading() {
 function initNavigation() {
     const navbar = document.getElementById('navbar');
     const mobileToggle = document.querySelector('.mobile-nav-toggle');
-    const navLinks = document.querySelector('.nav-links');
+    const mobileMenu = document.querySelector('.mobile-menu');
     
     // Navbar scroll effect
     window.addEventListener('scroll', () => {
@@ -64,10 +64,35 @@ function initNavigation() {
     });
     
     // Mobile menu toggle
-    if (mobileToggle) {
+    if (mobileToggle && mobileMenu) {
         mobileToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
             mobileToggle.classList.toggle('active');
+            
+            // Prevent body scroll when menu is open
+            if (mobileMenu.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        });
+        
+        // Close menu when clicking on a link
+        mobileMenu.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                mobileToggle.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.remove('active');
+                mobileToggle.classList.remove('active');
+                document.body.style.overflow = '';
+            }
         });
     }
     
@@ -83,8 +108,11 @@ function initNavigation() {
                     behavior: 'smooth'
                 });
                 // Close mobile menu if open
-                navLinks.classList.remove('active');
-                mobileToggle.classList.remove('active');
+                if (mobileMenu) {
+                    mobileMenu.classList.remove('active');
+                    mobileToggle.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
             }
         });
     });
