@@ -3129,21 +3129,16 @@ img[data-src] {
     text-align: center;
 }
 
-/* Fix video background on mobile - APPROCHE RADICALE */
+/* Fix video background on mobile - SOLUTION DÉFINITIVE */
 @media (max-width: 768px) {
-    /* Force hero background to be behind everything */
-    .hero-background {
-        z-index: -1000 !important;
-    }
-    
-    /* Force video background */
+    /* Force video to be behind EVERYTHING */
     .hero-video-bg {
         position: fixed !important;
         top: 0 !important;
         left: 0 !important;
         width: 100vw !important;
         height: 100vh !important;
-        z-index: -999 !important;
+        z-index: -99999 !important;
         overflow: hidden !important;
     }
     
@@ -3154,14 +3149,24 @@ img[data-src] {
         width: 100vw !important;
         height: 100vh !important;
         object-fit: cover !important;
-        z-index: -998 !important;
+        z-index: -99998 !important;
     }
     
-    /* Hide all other hero elements on mobile */
+    /* Force ALL other elements to be above video */
+    .hero-background {
+        z-index: 1 !important;
+    }
+    
     .hero-particles,
     .hero-gradient,
     .tech-elements {
-        display: none !important;
+        z-index: 2 !important;
+    }
+    
+    /* Make content transparent to see video */
+    .hero-content {
+        background: transparent !important;
+        z-index: 10 !important;
     }
     
     /* Remove ALL backgrounds on mobile */
