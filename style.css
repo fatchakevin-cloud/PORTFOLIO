@@ -3129,45 +3129,68 @@ img[data-src] {
     text-align: center;
 }
 
-/* Fix video background on mobile */
+/* Fix video background on mobile - APPROCHE AGRESSIVE */
 @media (max-width: 768px) {
+    /* Force video background */
     .hero-video-bg {
         position: fixed !important;
         top: 0 !important;
         left: 0 !important;
-        width: 100% !important;
+        width: 100vw !important;
         height: 100vh !important;
-        z-index: -1 !important;
+        z-index: -999 !important;
+        overflow: hidden !important;
     }
     
     .hero-video {
         position: absolute !important;
-        top: 50% !important;
-        left: 50% !important;
-        min-width: 100% !important;
-        min-height: 100% !important;
-        width: auto !important;
-        height: auto !important;
-        transform: translate(-50%, -50%) !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100vw !important;
+        height: 100vh !important;
         object-fit: cover !important;
+        z-index: -998 !important;
     }
     
-    /* Make website importance section transparent on mobile */
+    /* Remove ALL backgrounds on mobile */
     .website-importance {
-        background: transparent !important;
+        background: none !important;
+        background-color: transparent !important;
+        background-image: none !important;
     }
     
-    .website-importance::before {
+    .website-importance::before,
+    .website-importance::after {
         display: none !important;
+        content: none !important;
     }
     
     .importance-card {
-        background: rgba(255, 255, 255, 0.1) !important;
-        backdrop-filter: blur(10px) !important;
-        border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        background: rgba(0, 0, 0, 0.3) !important;
+        backdrop-filter: blur(15px) !important;
+        border: 1px solid rgba(255, 255, 255, 0.3) !important;
+        color: white !important;
     }
     
     .cta-section {
+        background: none !important;
+        background-color: transparent !important;
+    }
+    
+    .cta-content {
+        background: rgba(0, 0, 0, 0.4) !important;
+        backdrop-filter: blur(15px) !important;
+        border-radius: 20px !important;
+        padding: 2rem !important;
+        border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    }
+    
+    /* Force all sections to be transparent */
+    section {
+        background: transparent !important;
+    }
+    
+    .container {
         background: transparent !important;
     }
 }
