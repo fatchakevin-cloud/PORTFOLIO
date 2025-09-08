@@ -3129,8 +3129,13 @@ img[data-src] {
     text-align: center;
 }
 
-/* Fix video background on mobile - APPROCHE AGRESSIVE */
+/* Fix video background on mobile - APPROCHE RADICALE */
 @media (max-width: 768px) {
+    /* Force hero background to be behind everything */
+    .hero-background {
+        z-index: -1000 !important;
+    }
+    
     /* Force video background */
     .hero-video-bg {
         position: fixed !important;
@@ -3150,6 +3155,13 @@ img[data-src] {
         height: 100vh !important;
         object-fit: cover !important;
         z-index: -998 !important;
+    }
+    
+    /* Hide all other hero elements on mobile */
+    .hero-particles,
+    .hero-gradient,
+    .tech-elements {
+        display: none !important;
     }
     
     /* Remove ALL backgrounds on mobile */
