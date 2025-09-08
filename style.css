@@ -3151,4 +3151,23 @@ img[data-src] {
         transform: translate(-50%, -50%) !important;
         object-fit: cover !important;
     }
+    
+    /* Make website importance section transparent on mobile */
+    .website-importance {
+        background: transparent !important;
+    }
+    
+    .website-importance::before {
+        display: none !important;
+    }
+    
+    .importance-card {
+        background: rgba(255, 255, 255, 0.1) !important;
+        backdrop-filter: blur(10px) !important;
+        border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    }
+    
+    .cta-section {
+        background: transparent !important;
+    }
 }
