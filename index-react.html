@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Zehi Serge Éric - Développeur Web & Expert Cybersécurité | Portfolio React</title>
+    <meta name="description" content="Portfolio interactif de Zehi Serge Éric Kevin Fatcha, développeur web passionné et expert en cybersécurité basé à Abidjan.">
+    <meta name="author" content="Zehi Serge Éric Kevin Fatcha">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- React CDN -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel" src="react-components.js"></script>
+    
+    <script type="text/babel">
+        const { useState, useEffect, useRef } = React;
+
+        // Composant principal du portfolio
+        function Portfolio() {
+            const [isLoading, setIsLoading] = useState(true);
+            const [activeSection, setActiveSection] = useState('hero');
+            const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+            useEffect(() => {
+                // Simulation du chargement
+                setTimeout(() => setIsLoading(false), 2000);
+                
+                // Suivi de la position de la souris pour les effets de parallaxe
+                const handleMouseMove = (e) => {
+                    setMousePosition({ x: e.clientX, y: e.clientY });
+                };
+                
+                window.addEventListener('mousemove', handleMouseMove);
+                return () => window.removeEventListener('mousemove', handleMouseMove);
+            }, []);
+
+            // Navigation
+            const Navigation = () => (
+                <nav id="navbar" className={activeSection !== 'hero' ? 'scrolled' : ''}>
+                    <div className="container nav-container">
+                        <div className="logo">Zehi <span>Serge</span></div>
+                        <div className="nav-links">
+                            <a href="#hero" onClick={() => setActiveSection('hero')}>Accueil</a>
+                            <a href="#about" onClick={() => setActiveSection('about')}>À Propos</a>
+                            <a href="#skills" onClick={() => setActiveSection('skills')}>Compétences</a>
+                            <a href="#projects" onClick={() => setActiveSection('projects')}>Projets</a>
+                            <a href="#contact" onClick={() => setActiveSection('contact')}>Contact</a>
+                        </div>
+                        <button className="mobile-nav-toggle">
+                            <i className="fas fa-bars"></i>
+                        </button>
+                    </div>
+                </nav>
+            );
+
+            // Section Hero
+            const HeroSection = () => (
+                <section id="hero" className="hero">
+                    <div className="hero-background">
+                        <div className="hero-particles"></div>
+                        <div className="hero-gradient"></div>
+                    </div>
+                    <div className="container">
+                        <div className="hero-content">
+                            <div className="hero-badge glass animate-zoom-in">
+                                <i className="fas fa-code animate-rotate-3d"></i>
+                                <span>Développeur Full-Stack</span>
+                            </div>
+                            <h1 className="hero-title">
+                                <span className="hero-greeting animate-slide-in-left">Salut, je suis</span>
+                                <span className="hero-name text-gradient animate-text-glow">Zehi Serge</span>
+                            </h1>
+                            <AdvancedTypewriter 
+                                texts={[
+                                    "Développeur Web & Expert Cybersécurité",
+                                    "Full-Stack Developer",
+                                    "Security Specialist",
+                                    "Tech Enthusiast"
+                                ]}
+                                speed={100}
+                            />
+                            <p className="hero-description">
+                                Passionné par les technologies innovantes et la sécurité informatique, 
+                                je crée des solutions web performantes et sécurisées pour répondre aux défis numériques d'aujourd'hui.
+                            </p>
+                            <div className="hero-buttons">
+                                <a href="#contact" className="btn btn-primary btn-magnetic hover-shimmer">
+                                    <i className="fas fa-paper-plane"></i> 
+                                    <span>Me Contacter</span>
+                                </a>
+                                <a href="files/Zehi_Serge_CV.pdf.pdf" className="btn btn-secondary btn-magnetic hover-shimmer" download>
+                                    <i className="fas fa-download"></i> 
+                                    <span>Télécharger CV</span>
+                                </a>
+                            </div>
+                            <AnimatedStats 
+                                stats={[
+                                    { value: 3, suffix: '+', label: 'Années d\'expérience' },
+                                    { value: 50, suffix: '+', label: 'Projets réalisés' },
+                                    { value: 100, suffix: '%', label: 'Satisfaction client' }
+                                ]}
+                            />
+                            <div className="hero-info">
+                                <div className="info-item">
+                                    <i className="fas fa-envelope"></i>
+                                    <span>fatchakevin@gmail.com</span>
+                                </div>
+                                <div className="info-item">
+                                    <i className="fas fa-phone"></i>
+                                    <span>‪‪+225 0702052578‬‬</span>
+                                </div>
+                                <div className="info-item">
+                                    <i className="fas fa-map-marker-alt"></i>
+                                    <span>Abidjan, Côte d'Ivoire</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="hero-image">
+                            <div className="image-container hover-tilt animate-morphing">
+                                <img src="images/zehi_serge_eric.jpg" alt="Zehi Serge Eric" />
+                                <div className="image-glow animate-glow"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="scroll-indicator">
+                        <div className="scroll-arrow">
+                            <i className="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                </section>
+            );
+
+            // Section À Propos
+            const AboutSection = () => (
+                <section id="about" className="about">
+                    <div className="container">
+                        <div className="section-title">
+                            <h2>À Propos de Moi</h2>
+                            <p>Découvrez mon parcours, mes passions et ce qui me motive dans le monde de la technologie</p>
+                        </div>
+                        <div className="about-content">
+                            <div className="about-image">
+                                <img src="images/zehi_serge_eric.jpg" alt="Zehi Serge Eric" />
+                                <div className="about-badge animate-glow hover-rotate">
+                                    <i className="fas fa-user-secret animate-rotate-3d"></i>
+                                </div>
+                            </div>
+                            <div className="about-text">
+                                <h3>Zehi Serge Éric Kevin Fatcha</h3>
+                                <p className="title">Développeur Web & Expert Cybersécurité</p>
+                                <div className="about-details">
+                                    <p><strong>Localisation:</strong> Cocody Rivera Palmeraie, Abidjan</p>
+                                    <p><strong>Nationalité:</strong> Ivoirienne</p>
+                                    <p><strong>Email:</strong> fatchakevin@gmail.com</p>
+                                    <p><strong>Téléphone:</strong> ‪‪+225 0702052578‬‬</p>
+                                </div>
+                                <p>
+                                    Passionné par les technologies de l'information et la programmation, je possède une solide formation en cybersécurité. 
+                                    Motivé à développer des solutions web innovantes et sécurisées, je cherche à appliquer mes connaissances techniques dans un environnement dynamique.
+                                </p>
+                                <div className="languages">
+                                    <h4>Langues</h4>
+                                    <p>Français (Courant), Anglais (Intermédiaire)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            );
+
+            // Section Compétences
+            const SkillsSection = () => (
+                <section id="skills" className="skills">
+                    <div className="container">
+                        <div className="section-title">
+                            <h2>Mes Compétences</h2>
+                            <p>Un aperçu de mes compétences techniques et professionnelles</p>
+                        </div>
+                        <InteractiveSkills />
+                    </div>
+                </section>
+            );
+
+            // Section Projets
+            const ProjectsSection = () => (
+                <section id="projects" className="projects">
+                    <div className="container">
+                        <div className="section-title">
+                            <h2>Mes Projets</h2>
+                            <p>Découvrez quelques-uns de mes projets récents et mes réalisations</p>
+                        </div>
+                        <InteractiveProjects />
+                    </div>
+                </section>
+            );
+
+            // Section Contact
+            const ContactSection = () => (
+                <section id="contact" className="contact">
+                    <div className="container">
+                        <div className="section-title">
+                            <h2>Contactez-moi</h2>
+                            <p>N'hésitez pas à me contacter pour discuter de projets ou d'opportunités</p>
+                        </div>
+                        <div className="contact-container">
+                            <div className="contact-info">
+                                <div className="contact-item hover-lift glass">
+                                    <div className="contact-icon animate-glow">
+                                        <i className="fas fa-envelope animate-rotate-3d"></i>
+                                    </div>
+                                    <div className="contact-details">
+                                        <h4>Email</h4>
+                                        <p>fatchakevin@gmail.com</p>
+                                    </div>
+                                </div>
+                                <div className="contact-item hover-lift glass">
+                                    <div className="contact-icon animate-glow">
+                                        <i className="fas fa-phone animate-rotate-3d"></i>
+                                    </div>
+                                    <div className="contact-details">
+                                        <h4>Téléphone</h4>
+                                        <p>+225 0702052578</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="contact-form">
+                                <form action="https://formsubmit.co/fatchakevin@gmail.com" method="POST">
+                                    <input type="text" name="name" placeholder="Nom complet" required />
+                                    <input type="email" name="email" placeholder="Email" required />
+                                    <input type="text" name="subject" placeholder="Sujet" required />
+                                    <textarea name="message" placeholder="Votre message" required></textarea>
+                                    <input type="hidden" name="_next" value="https://fatchakevin-cloud.github.io/PORTFOLIO/merci.html" />
+                                    <input type="hidden" name="_captcha" value="false" />
+                                    <button type="submit" className="submit-btn btn-magnetic hover-shimmer">
+                                        <i className="fas fa-paper-plane animate-rotate-3d"></i> Envoyer le message
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            );
+
+            // Footer
+            const Footer = () => (
+                <footer>
+                    <div className="container">
+                        <div className="footer-content">
+                            <div className="footer-about">
+                                <div className="footer-logo">Zehi <span>Serge</span></div>
+                                <p>Développeur Web & Expert Cybersécurité passionné par la création de solutions innovantes et sécurisées.</p>
+                                <div className="footer-social">
+                                    <a href="https://github.com/fatchakevin-cloud" target="_blank">
+                                        <i className="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="footer-links">
+                                <h4>Liens rapides</h4>
+                                <ul>
+                                    <li><a href="#hero">Accueil</a></li>
+                                    <li><a href="#about">À Propos</a></li>
+                                    <li><a href="#skills">Compétences</a></li>
+                                    <li><a href="#contact">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="footer-bottom">
+                            <p>&copy; 2025 Zehi Serge Éric. Suivez-moi sur <a href="https://github.com/fatchakevin-cloud" target="_blank">GitHub</a></p>
+                        </div>
+                    </div>
+                </footer>
+            );
+
+            // Écran de chargement
+            if (isLoading) {
+                return (
+                    <div className="loading-overlay">
+                        <div className="loading-content">
+                            <div className="loading-spinner"></div>
+                            <div className="loading-text">Chargement...</div>
+                        </div>
+                    </div>
+                );
+            }
+
+            return (
+                <div>
+                    <AnimatedParticles />
+                    <Navigation />
+                    <HeroSection />
+                    <AboutSection />
+                    <SkillsSection />
+                    <ProjectsSection />
+                    <ContactSection />
+                    <Footer />
+                </div>
+            );
+        }
+
+        // Rendu de l'application
+        ReactDOM.render(<Portfolio />, document.getElementById('root'));
+    </script>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
+

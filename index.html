@@ -3,43 +3,124 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Zehi Serge Éric - Développeur Web & Expert Cybersécurité | Portfolio</title>
-    <meta name="description" content="Portfolio de Zehi Serge Éric Kevin Fatcha, développeur web passionné et expert en cybersécurité basé à Abidjan.">
+    <title>Accueil - Zehi Serge Éric</title>
+    <meta name="description" content="Portfolio ultra-moderne de Zehi Serge Éric Kevin Fatcha avec effets néon et cyberpunk.">
     <meta name="author" content="Zehi Serge Éric Kevin Fatcha">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav id="navbar">
+    <nav id="navbar" class="navbar-modern">
         <div class="container nav-container">
-            <div class="logo">Zehi <span>Serge</span></div>
-            <div class="nav-links">
-                <a href="#hero">Accueil</a>
-                <a href="#about">À Propos</a>
-                <a href="#skills">Compétences</a>
-                <a href="#contact">Contact</a>
+            <div class="logo-container">
+                <div class="logo">
+                    <i class="fas fa-code logo-icon"></i>
+                    <span class="logo-text">Zehi <span class="logo-accent">Serge</span></span>
+                </div>
+                <div class="logo-subtitle">Développeur Web</div>
             </div>
-            <button class="mobile-nav-toggle">
-                <i class="fas fa-bars"></i>
-            </button>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">
+                    <i class="fas fa-home"></i>
+                    <span>Accueil</span>
+                </a>
+                <a href="about.html" class="nav-link">
+                    <i class="fas fa-user"></i>
+                    <span>À Propos</span>
+                </a>
+                <a href="skills.html" class="nav-link">
+                    <i class="fas fa-cogs"></i>
+                    <span>Compétences</span>
+                </a>
+                <a href="projects.html" class="nav-link">
+                    <i class="fas fa-project-diagram"></i>
+                    <span>Projets</span>
+                </a>
+                <a href="contact.html" class="nav-link">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact</span>
+                </a>
+            </div>
+            <div class="nav-actions">
+                <a href="contact.html" class="btn-contact">
+                    <i class="fas fa-paper-plane"></i>
+                    <span>Me Contacter</span>
+                </a>
+                <button class="mobile-nav-toggle">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
         </div>
     </nav>
 
     <section id="hero" class="hero">
+        <div class="hero-background">
+            <div class="hero-particles"></div>
+            <div class="hero-gradient"></div>
+            <div class="tech-elements">
+                <div class="floating-code">&lt;/&gt;</div>
+                <div class="floating-binary">01010101</div>
+                <div class="floating-cyber">SECURE</div>
+                <div class="floating-ai">AI</div>
+                <div class="floating-cloud">CLOUD</div>
+                <div class="floating-react">React</div>
+                <div class="floating-node">Node.js</div>
+                <div class="floating-python">Python</div>
+                <div class="floating-docker">Docker</div>
+                <div class="floating-git">Git</div>
+                <div class="floating-api">API</div>
+                <div class="floating-db">DB</div>
+            </div>
+            <div class="hero-video-bg">
+                <video autoplay muted loop playsinline class="hero-video">
+                    <source src="video pour accueille/video inf.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la lecture vidéo.
+                </video>
+                <div class="video-overlay"></div>
+            </div>
+        </div>
         <div class="container">
             <div class="hero-content">
-                <h1>Bonjour, je suis <span>Zehi Serge</span></h1>
-                <div class="typewriter">
-                    <span id="typewriter-text">Développeur Web & Expert Cybersécurité</span>
+                <div class="hero-badge glass animate-zoom-in">
+                    <i class="fas fa-code animate-rotate-3d"></i>
+                    <span>Développeur Full-Stack & Expert Cybersécurité</span>
                 </div>
-                <p>Passionné par les technologies innovantes et la sécurité informatique, je crée des solutions web performantes et sécurisées pour répondre aux défis numériques d'aujourd'hui.</p>
+                <h1 class="hero-title">
+                    <span class="hero-greeting animate-slide-in-left">Bonjour, je suis</span>
+                    <span class="hero-name text-gradient animate-text-glow">Zehi Serge Éric</span>
+                </h1>
+                <div class="typewriter">
+                    <span id="typewriter-text">Spécialiste en Développement Web & Sécurité Informatique</span>
+                </div>
+                <p class="hero-description">Expert en technologies web modernes et cybersécurité, je conçois des solutions robustes et sécurisées. De la conception à la mise en production, je transforme vos défis techniques en succès digitaux.</p>
                 <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-outline">
-                        <i class="fas fa-paper-plane"></i> Me Contacter
+                    <a href="contact.html" class="btn btn-primary btn-magnetic hover-shimmer">
+                        <i class="fas fa-rocket"></i> 
+                        <span>Démarrer un projet</span>
                     </a>
-                    <a href="files/Zehi_Serge_CV.pdf.pdf" class="btn btn-outline" download>
-                        <i class="fas fa-download"></i> Télécharger CV
+                    <a href="about.html" class="btn btn-secondary btn-magnetic hover-shimmer">
+                        <i class="fas fa-shield-alt"></i> 
+                        <span>Expertise technique</span>
                     </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item hover-lift animate-elastic-bounce">
+                        <div class="stat-number text-gradient"><i class="fas fa-code"></i></div>
+                        <div class="stat-label">Développement Full-Stack</div>
+                    </div>
+                    <div class="stat-item hover-lift animate-elastic-bounce">
+                        <div class="stat-number text-gradient"><i class="fas fa-shield-alt"></i></div>
+                        <div class="stat-label">Cybersécurité</div>
+                    </div>
+                    <div class="stat-item hover-lift animate-elastic-bounce">
+                        <div class="stat-number text-gradient"><i class="fas fa-cloud"></i></div>
+                        <div class="stat-label">Cloud & DevOps</div>
+                    </div>
                 </div>
                 <div class="hero-info">
                     <div class="info-item">
@@ -59,139 +140,78 @@
         </div>
     </section>
 
-    <section id="about" class="about">
+    <!-- Section Importance des Sites Web -->
+    <section class="website-importance">
         <div class="container">
             <div class="section-title">
-                <h2>À Propos de Moi</h2>
-                <p>Découvrez mon parcours, mes passions et ce qui me motive dans le monde de la technologie</p>
+                <h2>Pourquoi Votre Entreprise a Besoin d'un Site Web ?</h2>
+                <p>Dans le monde numérique d'aujourd'hui, avoir un site web professionnel n'est plus un luxe, c'est une nécessité absolue.</p>
             </div>
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="images/zehi_serge_eric.jpg" alt="Zehi Serge Eric">
-                    <div class="about-badge"><i class="fas fa-user-secret"></i></div>
-                </div>
-                <div class="about-text">
-                    <h3>Zehi Serge Éric Kevin Fatcha</h3>
-                    <p class="title">Développeur Web & Expert Cybersécurité</p>
-                    <div class="about-details">
-                        <p><strong>Localisation:</strong> Cocody Rivera Palmeraie, Abidjan</p>
-                        <p><strong>Nationalité:</strong> Ivoirienne</p>
-                        <p><strong>Email:</strong> fatchakevin@gmail.com</p>
-                        <p><strong>Téléphone:</strong> ‪‪+225 0702052578‬‬</p>
+            
+            <div class="importance-grid">
+                <div class="importance-card glass animate-slide-up">
+                    <div class="card-icon">
+                        <i class="fas fa-globe"></i>
                     </div>
-                    <p>Passionné par les technologies de l'information et la programmation, je possède une solide formation en cybersécurité. Motivé à développer des solutions web innovantes et sécurisées, je cherche à appliquer mes connaissances techniques dans un environnement dynamique.</p>
-                    <div class="languages">
-                        <h4>Langues</h4>
-                        <p>Français (Courant), Anglais (Intermédiaire)</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills" class="skills">
-        <div class="container">
-            <div class="section-title">
-                <h2>Mes Compétences</h2>
-                <p>Un aperçu de mes compétences techniques et professionnelles</p>
-            </div>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Développement Web</h3>
-                    <div class="skill-item">
-                        <div class="skill-header"><span>HTML/CSS</span><span>95%</span></div>
-                        <div class="skill-bar"><div class="skill-progress" data-width="95%"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header"><span>JavaScript</span><span>90%</span></div>
-                        <div class="skill-bar"><div class="skill-progress" data-width="90%"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header"><span>React</span><span>85%</span></div>
-                        <div class="skill-bar"><div class="skill-progress" data-width="85%"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header"><span>Node.js</span><span>80%</span></div>
-                        <div class="skill-bar"><div class="skill-progress" data-width="80%"></div></div>
-                    </div>
+                    <h3>Présence Mondiale 24/7</h3>
+                    <p>Votre site web fonctionne 24 heures sur 24, 7 jours sur 7, permettant à vos clients de vous découvrir et de vous contacter à tout moment, même quand vous dormez.</p>
                 </div>
 
-                <div class="skill-category">
-                    <h3><i class="fas fa-shield-alt"></i> Cybersécurité</h3>
-                    <div class="skill-item">
-                        <div class="skill-header"><span>Analyse de vulnérabilités</span><span>90%</span></div>
-                        <div class="skill-bar"><div class="skill-progress" data-width="90%"></div></div>
+                <div class="importance-card glass animate-slide-up">
+                    <div class="card-icon">
+                        <i class="fas fa-users"></i>
                     </div>
-                    <div class="skill-item">
-                        <div class="skill-header"><span>Sécurité des applications</span><span>85%</span></div>
-                        <div class="skill-bar"><div class="skill-progress" data-width="85%"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header"><span>Tests d'intrusion</span><span>80%</span></div>
-                        <div class="skill-bar"><div class="skill-progress" data-width="80%"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header"><span>Gestion des risques</span><span>85%</span></div>
-                        <div class="skill-bar"><div class="skill-progress" data-width="85%"></div></div>
-                    </div>
+                    <h3>Crédibilité & Professionnalisme</h3>
+                    <p>Un site web professionnel renforce la confiance de vos clients. 75% des consommateurs jugent la crédibilité d'une entreprise sur la base de son site web.</p>
                 </div>
 
-                <div class="skill-category">
-                    <h3><i class="fas fa-server"></i> Autres Compétences</h3>
-                    <div class="skill-item">
-                        <div class="skill-header"><span>Python</span><span>85%</span></div>
-                        <div class="skill-bar"><div class="skill-progress" data-width="85%"></div></div>
+                <div class="importance-card glass animate-slide-up">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-line"></i>
                     </div>
-                    <div class="skill-item">
-                        <div class="skill-header"><span>Bases de données</span><span>80%</span></div>
-                        <div class="skill-bar"><div class="skill-progress" data-width="80%"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header"><span>Git & GitHub</span><span>90%</span></div>
-                        <div class="skill-bar"><div class="skill-progress" data-width="90%"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header"><span>DevOps</span><span>75%</span></div>
-                        <div class="skill-bar"><div class="skill-progress" data-width="75%"></div></div>
-                    </div>
+                    <h3>Croissance des Ventes</h3>
+                    <p>Les entreprises avec un site web voient leurs ventes augmenter de 30% en moyenne. C'est votre meilleur vendeur qui ne prend jamais de congé.</p>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>Contactez-moi</h2>
-                <p>N'hésitez pas à me contacter pour discuter de projets ou d'opportunités</p>
-            </div>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                        <div class="contact-details">
-                            <h4>Email</h4>
-                            <p>fatchakevin@gmail.com</p>
-                        </div>
+                <div class="importance-card glass animate-slide-up">
+                    <div class="card-icon">
+                        <i class="fas fa-search"></i>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
-                        <div class="contact-details">
-                            <h4>Téléphone</h4>
-                            <p>+225 0702052578</p>
-                        </div>
-                    </div>
+                    <h3>Visibilité sur Google</h3>
+                    <p>93% des expériences en ligne commencent par un moteur de recherche. Sans site web, vous êtes invisible pour vos clients potentiels.</p>
                 </div>
-                <div class="contact-form">
-                    <form action="https://formsubmit.co/fatchakevin@gmail.com" method="POST">
-                        <input type="text" name="name" placeholder="Nom complet" required>
-                        <input type="email" name="email" placeholder="Email" required>
-                        <input type="text" name="subject" placeholder="Sujet" required>
-                        <textarea name="message" placeholder="Votre message" required></textarea>
-                        <input type="hidden" name="_next" value="https://fatchakevin-cloud.github.io/PORTFOLIO/merci.html">
-                        <input type="hidden" name="_captcha" value="false">
-                        <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Envoyer le message</button>
-                    </form>
+
+                <div class="importance-card glass animate-slide-up">
+                    <div class="card-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Accès Mobile</h3>
+                    <p>Plus de 60% des recherches se font sur mobile. Un site web responsive garantit que vos clients peuvent vous trouver sur tous leurs appareils.</p>
+                </div>
+
+                <div class="importance-card glass animate-slide-up">
+                    <div class="card-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>Coût-Efficacité</h3>
+                    <p>Un site web coûte moins cher qu'une publicité traditionnelle et offre un retour sur investissement bien plus élevé sur le long terme.</p>
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <div class="cta-content">
+                    <h3>Prêt à Transformer Votre Entreprise ?</h3>
+                    <p>Ne laissez pas vos concurrents vous devancer. Contactez-moi dès aujourd'hui pour créer le site web qui propulsera votre entreprise vers le succès.</p>
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="btn btn-primary btn-magnetic">
+                            <i class="fas fa-rocket"></i>
+                            Démarrer Mon Projet
+                        </a>
+                        <a href="about.html" class="btn btn-secondary btn-magnetic">
+                            <i class="fas fa-info-circle"></i>
+                            En Savoir Plus
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -205,9 +225,6 @@
                     <p>Développeur Web & Expert Cybersécurité passionné par la création de solutions innovantes et sécurisées.</p>
                     <div class="footer-social">
                         <a href="https://github.com/fatchakevin-cloud" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
                     </div>
                 </div>
                 <div class="footer-links">
@@ -226,11 +243,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
-
-
-
-
-

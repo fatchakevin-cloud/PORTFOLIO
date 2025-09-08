@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Contactez-moi - Zehi Serge Éric</title>
+    <meta name="description" content="Contactez Zehi Serge Éric pour vos projets de développement web et cybersécurité.">
+    <meta name="author" content="Zehi Serge Éric Kevin Fatcha">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav id="navbar" class="navbar-modern">
+        <div class="container nav-container">
+            <div class="logo-container">
+                <div class="logo">
+                    <i class="fas fa-code logo-icon"></i>
+                    <span class="logo-text">Zehi <span class="logo-accent">Serge</span></span>
+                </div>
+                <div class="logo-subtitle">Développeur Web</div>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Accueil</span>
+                </a>
+                <a href="about.html" class="nav-link">
+                    <i class="fas fa-user"></i>
+                    <span>À Propos</span>
+                </a>
+                <a href="skills.html" class="nav-link">
+                    <i class="fas fa-cogs"></i>
+                    <span>Compétences</span>
+                </a>
+                <a href="projects.html" class="nav-link">
+                    <i class="fas fa-project-diagram"></i>
+                    <span>Projets</span>
+                </a>
+                <a href="contact.html" class="nav-link active">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact</span>
+                </a>
+            </div>
+            <div class="nav-actions">
+                <a href="contact.html" class="btn-contact">
+                    <i class="fas fa-paper-plane"></i>
+                    <span>Me Contacter</span>
+                </a>
+                <button class="mobile-nav-toggle">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contactez-moi</h2>
+                <p>N'hésitez pas à me contacter pour discuter de projets ou d'opportunités</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item hover-lift glass">
+                        <div class="contact-icon animate-glow"><i class="fas fa-envelope animate-rotate-3d"></i></div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>fatchakevin@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item hover-lift glass">
+                        <div class="contact-icon animate-glow"><i class="fas fa-phone animate-rotate-3d"></i></div>
+                        <div class="contact-details">
+                            <h4>Téléphone</h4>
+                            <p>+225 0702052578</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form action="https://formsubmit.co/fatchakevin@gmail.com" method="POST">
+                        <input type="text" name="name" placeholder="Nom complet" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <input type="text" name="subject" placeholder="Sujet" required>
+                        <textarea name="message" placeholder="Votre message" required></textarea>
+                        <input type="hidden" name="_next" value="https://fatchakevin-cloud.github.io/PORTFOLIO/merci.html">
+                        <input type="hidden" name="_captcha" value="false">
+                        <button type="submit" class="submit-btn btn-magnetic hover-shimmer"><i class="fas fa-paper-plane animate-rotate-3d"></i> Envoyer le message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">Zehi <span>Serge</span></div>
+                    <p>Développeur Web & Expert Cybersécurité passionné par la création de solutions innovantes et sécurisées.</p>
+                    <div class="footer-social">
+                        <a href="https://github.com/fatchakevin-cloud" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Liens rapides</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="about.html">À Propos</a></li>
+                        <li><a href="skills.html">Compétences</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Zehi Serge Éric. Suivez-moi sur <a href="https://github.com/fatchakevin-cloud" target="_blank">GitHub</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
