@@ -921,6 +921,50 @@ nav.scrolled {
     color: var(--white);
 }
 
+.about-actions {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.about-actions .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.about-actions .btn-primary {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    color: var(--white);
+    border-color: var(--primary);
+}
+
+.about-actions .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+}
+
+.about-actions .btn-secondary {
+    background: transparent;
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.about-actions .btn-secondary:hover {
+    background: var(--primary);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
+}
+
 .languages p {
     color: var(--gray-300);
     margin-bottom: 0.5rem;
@@ -1642,23 +1686,25 @@ nav.scrolled {
     
     .website-importance .section-title h2 {
         font-size: 2rem;
-        color: #ffffff !important;
-        text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.9) !important;
-        background: rgba(0, 0, 0, 0.3) !important;
+        color: #000000 !important;
+        text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8) !important;
+        background: rgba(255, 255, 255, 0.9) !important;
         padding: 1rem !important;
         border-radius: 10px !important;
         backdrop-filter: blur(5px) !important;
         -webkit-backdrop-filter: blur(5px) !important;
+        font-weight: 700 !important;
     }
     
     .website-importance .section-title p {
-        color: #ffffff !important;
-        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9) !important;
-        background: rgba(0, 0, 0, 0.3) !important;
+        color: #000000 !important;
+        text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8) !important;
+        background: rgba(255, 255, 255, 0.8) !important;
         padding: 0.8rem !important;
         border-radius: 8px !important;
         backdrop-filter: blur(5px) !important;
         -webkit-backdrop-filter: blur(5px) !important;
+        font-weight: 600 !important;
     }
     
     .importance-grid {
