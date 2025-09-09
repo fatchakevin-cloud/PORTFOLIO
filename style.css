@@ -3234,12 +3234,10 @@ img[data-src] {
         left: 0 !important;
         width: 100vw !important;
         height: 100vh !important;
-        z-index: -1 !important;
+        z-index: -999 !important;
         overflow: hidden !important;
-        /* Fallback background simple et efficace */
-        background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #0d1117 100%) !important;
-        background-size: cover !important;
-        background-position: center !important;
+        /* No fallback background - let video show */
+        background: none !important;
     }
     
     /* Video fullscreen with object-fit: cover - iPhone 13 fix */
@@ -3255,6 +3253,9 @@ img[data-src] {
         z-index: -999 !important;
         display: block !important;
         visibility: visible !important;
+        /* Force video to load and display */
+        opacity: 1 !important;
+        pointer-events: none !important;
         /* iPhone 13 specific fixes */
         -webkit-transform: translateZ(0);
         -moz-transform: translateZ(0);
@@ -3286,6 +3287,26 @@ img[data-src] {
     }
     
     .tech-elements {
+        display: none !important;
+    }
+    
+    /* Hide all background elements that might cover video */
+    .hero-background {
+        background: none !important;
+    }
+    
+    .floating-code,
+    .floating-binary,
+    .floating-cyber,
+    .floating-ai,
+    .floating-cloud,
+    .floating-react,
+    .floating-node,
+    .floating-python,
+    .floating-docker,
+    .floating-git,
+    .floating-api,
+    .floating-db {
         display: none !important;
     }
     
