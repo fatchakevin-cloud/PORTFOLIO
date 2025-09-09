@@ -1845,6 +1845,7 @@ footer {
 
 /* Navigation mobile - Toujours visible */
 @media (max-width: 768px) {
+    /* RÈGLE CONSOLIDÉE UNIQUE - NAVIGATION MOBILE */
     .nav-links {
         display: flex !important;
         flex-direction: row !important;
@@ -3704,25 +3705,7 @@ img[data-src] {
     }
 
     /* Navigation Mobile - Toujours visible */
-    .nav-links {
-        display: flex !important;
-        position: static !important;
-        background: rgba(0, 0, 0, 0.8) !important;
-        backdrop-filter: blur(15px);
-        -webkit-backdrop-filter: blur(15px);
-        flex-direction: row !important;
-        gap: 0.5rem;
-        padding: 0.5rem 1rem;
-        border-radius: 25px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        z-index: 1000 !important;
-        width: auto !important;
-        height: auto !important;
-        top: auto !important;
-        left: auto !important;
-        right: auto !important;
-    }
+    /* Règle consolidée pour la navigation mobile - SUPPRIMÉE (conflit) */
 
     .nav-link {
         width: auto !important;
@@ -3764,22 +3747,7 @@ img[data-src] {
 /* Mobiles - iPhone, Android */
 @media (max-width: 768px) {
     /* Navigation identique PC/mobile - iPhone 13 fix */
-    .nav-links {
-        display: flex !important;
-        flex-direction: row;
-        gap: 0.8rem;
-        position: static;
-        background: rgba(0, 0, 0, 0.8) !important;
-        padding: 0.5rem 1rem;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-        text-align: center;
-        justify-content: center;
-        width: auto;
-        flex-wrap: nowrap;
-        border-radius: 25px;
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-    }
+    /* Règle consolidée pour la navigation mobile - SUPPRIMÉE (conflit) */
 
     .nav-link {
         font-size: 0.7rem;
@@ -3829,38 +3797,12 @@ img[data-src] {
 
 /* Petits mobiles - iPhone SE, Android petits */
 @media (max-width: 480px) {
-    .nav-links {
-        gap: 0.5rem;
-    }
-    
-    .nav-link {
-        font-size: 0.6rem;
-        padding: 0.2rem 0.3rem;
-    }
-    
-    .logo-text {
-        font-size: 0.9rem;
-    }
-    
-    .logo-subtitle {
-        font-size: 0.5rem;
-    }
+    /* Règle consolidée pour la navigation mobile - SUPPRIMÉE (conflit) */
 }
 
 /* Très petits écrans */
 @media (max-width: 360px) {
-    .nav-links {
-        gap: 0.3rem;
-    }
-    
-    .nav-link {
-        font-size: 0.5rem;
-        padding: 0.1rem 0.2rem;
-    }
-    
-    .logo-text {
-        font-size: 0.8rem;
-    }
+    /* Règle consolidée pour la navigation mobile - SUPPRIMÉE (conflit) */
 }
 
 /* Orientation paysage mobile */
@@ -3987,16 +3929,7 @@ img[data-src] {
     }
     
     /* Navigation optimisée */
-    .nav-links {
-        display: flex !important;
-        flex-direction: row;
-        gap: 0.6rem;
-        background: rgba(0, 0, 0, 0.85) !important;
-        padding: 0.4rem 0.8rem;
-        border-radius: 20px;
-        backdrop-filter: blur(15px);
-        -webkit-backdrop-filter: blur(15px);
-    }
+    /* Règle consolidée pour la navigation mobile - SUPPRIMÉE (conflit) */
     
     .nav-link {
         font-size: 0.65rem;
@@ -4015,21 +3948,7 @@ img[data-src] {
     and (-webkit-device-pixel-ratio: 3) {
     
     /* Vidéo optimisée pour iPhone 13 Pro Max */
-    .hero-video {
-        position: fixed !important;
-        top: -20% !important;
-        left: -20% !important;
-        width: 140vw !important;
-        height: 140vh !important;
-        min-width: 140% !important;
-        min-height: 140% !important;
-        object-fit: cover !important;
-        z-index: -99999 !important;
-        transform: scale(1.5) !important;
-        -webkit-transform: scale(1.5) !important;
-        filter: brightness(1.3) contrast(1.3) saturate(1.2) !important;
-        -webkit-filter: brightness(1.3) contrast(1.3) saturate(1.2) !important;
-    }
+    /* Règle consolidée pour la vidéo mobile - SUPPRIMÉE (conflit) */
 }
 
 /* iPhone 14 Pro: 6.1" - 2556 x 1179 pixels */
@@ -4056,31 +3975,5 @@ img[data-src] {
     and (max-device-height: 926px) 
     and (-webkit-device-pixel-ratio: 3) {
     
-    /* Vidéo optimisée pour tous les iPhones */
-    .hero-video {
-        position: fixed !important;
-        top: -25% !important;
-        left: -25% !important;
-        width: 150vw !important;
-        height: 150vh !important;
-        min-width: 150% !important;
-        min-height: 150% !important;
-        object-fit: cover !important;
-        z-index: -99999 !important;
-        transform: scale(1.6) !important;
-        -webkit-transform: scale(1.6) !important;
-        filter: brightness(1.4) contrast(1.4) saturate(1.3) !important;
-        -webkit-filter: brightness(1.4) contrast(1.4) saturate(1.3) !important;
-    }
-    
-    .hero-video-bg {
-        position: fixed !important;
-        top: 0 !important;
-        left: 0 !important;
-        width: 100vw !important;
-        height: 100vh !important;
-        z-index: -99999 !important;
-        overflow: hidden !important;
-        background: none !important;
-    }
+    /* Règle consolidée pour la vidéo mobile - SUPPRIMÉE (conflit) */
 }
