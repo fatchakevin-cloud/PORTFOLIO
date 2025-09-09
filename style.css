@@ -3955,9 +3955,26 @@ img[data-src] {
         background-image: none !important;
     }
 
-    /* Fond noir sur toutes les autres pages */
-    body {
+    /* Fond noir sur toutes les autres pages SAUF accueil */
+    body:not(.home-page) {
         background: #000000 !important;
+    }
+
+    /* Forcer la transparence sur la page d'accueil pour voir la vidéo */
+    body {
+        background: transparent !important;
+    }
+
+    /* Transparence pour toutes les sections sur accueil */
+    section {
+        background: transparent !important;
+        background-color: transparent !important;
+        background-image: none !important;
+    }
+
+    .container {
+        background: transparent !important;
+        background-color: transparent !important;
     }
 
     .about,
