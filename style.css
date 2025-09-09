@@ -1,3 +1,49 @@
+/* ============================
+   CSS RESET - Compatibilité totale
+============================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Fix pour iOS Safari */
+input, textarea, select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
+}
+
+/* Fix pour Android Chrome */
+button, input, select, textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Fix pour tous les navigateurs */
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 :root {
     /* Palette de couleurs ULTRA-CLASS et MODERNE */
     --primary: #ff006e;
@@ -109,6 +155,9 @@ nav {
     background: rgba(15, 23, 42, 0.8);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
+    -moz-backdrop-filter: blur(20px);
+    -ms-backdrop-filter: blur(20px);
+    -o-backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     z-index: 1000;
     padding: 1rem 0;
@@ -2516,6 +2565,9 @@ footer {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
+    -moz-backdrop-filter: blur(20px);
+    -ms-backdrop-filter: blur(20px);
+    -o-backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
@@ -2524,6 +2576,9 @@ footer {
     background: rgba(15, 23, 42, 0.8);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
+    -moz-backdrop-filter: blur(20px);
+    -ms-backdrop-filter: blur(20px);
+    -o-backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
@@ -3158,11 +3213,22 @@ img[data-src] {
         z-index: -1 !important;
         display: block !important;
         visibility: visible !important;
-        /* iPhone Safari specific fixes */
-        -webkit-transform: translateZ(0);
-        transform: translateZ(0);
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
+    /* Cross-browser compatibility fixes */
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    -ms-perspective: 1000;
+    -o-perspective: 1000;
+    perspective: 1000;
     }
     
     /* Force ALL other elements to be above video */
@@ -3312,8 +3378,22 @@ img[data-src] {
 }
 
 /* ============================
-   Responsive Mobile
+   Responsive - Tous les appareils
 ============================ */
+
+/* Tablettes */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .nav-link {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.6rem;
+    }
+    
+    .logo-text {
+        font-size: 1.3rem;
+    }
+}
+
+/* Mobiles - iPhone, Android */
 @media (max-width: 768px) {
     /* Navigation identique PC/mobile - iPhone Safari fix */
     .nav-links {
@@ -3362,5 +3442,53 @@ img[data-src] {
     /* Navbar plus compacte */
     .nav-container {
         padding: 0.5rem 1rem;
+    }
+}
+
+/* Petits mobiles - iPhone SE, Android petits */
+@media (max-width: 480px) {
+    .nav-links {
+        gap: 0.5rem;
+    }
+    
+    .nav-link {
+        font-size: 0.6rem;
+        padding: 0.2rem 0.3rem;
+    }
+    
+    .logo-text {
+        font-size: 0.9rem;
+    }
+    
+    .logo-subtitle {
+        font-size: 0.5rem;
+    }
+}
+
+/* Très petits écrans */
+@media (max-width: 360px) {
+    .nav-links {
+        gap: 0.3rem;
+    }
+    
+    .nav-link {
+        font-size: 0.5rem;
+        padding: 0.1rem 0.2rem;
+    }
+    
+    .logo-text {
+        font-size: 0.8rem;
+    }
+}
+
+/* Orientation paysage mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    .nav-container {
+        padding: 0.3rem 1rem;
+    }
+    
+    .nav-link {
+        font-size: 0.6rem;
+        padding: 0.2rem 0.4rem;
     }
 }
