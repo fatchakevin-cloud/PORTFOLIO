@@ -3414,20 +3414,28 @@ img[data-src] {
     
     /* Make all cards transparent */
     .importance-card {
-        background: rgba(0, 0, 0, 0.3) !important;
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(0, 0, 0, 0.1) !important;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
     }
     
     .importance-card h3 {
         color: #ffffff !important;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+        background: transparent !important;
     }
     
     .importance-card p {
         color: #ffffff !important;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+        background: transparent !important;
+    }
+    
+    .importance-card .card-icon {
+        background: rgba(0, 0, 0, 0.2) !important;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
     }
     
     /* Make CTA section transparent too */
@@ -3442,22 +3450,19 @@ img[data-src] {
         border: 1px solid rgba(255, 255, 255, 0.1);
     }
     
-    .cta-content h2 {
+    .cta-content h2,
+    .cta-content h3 {
         color: #ffffff !important;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.95);
+        background: transparent !important;
     }
     
     .cta-content p {
         color: #ffffff !important;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+        background: transparent !important;
     }
     
-    .importance-card {
-        background: rgba(0, 0, 0, 0.3) !important;
-        backdrop-filter: blur(15px) !important;
-        border: 1px solid rgba(255, 255, 255, 0.3) !important;
-        color: white !important;
-    }
     
     .cta-section {
         background: none !important;
@@ -3465,11 +3470,11 @@ img[data-src] {
     }
     
     .cta-content {
-        background: rgba(0, 0, 0, 0.4) !important;
-        backdrop-filter: blur(15px) !important;
+        background: rgba(0, 0, 0, 0.1) !important;
+        backdrop-filter: blur(5px) !important;
         border-radius: 20px !important;
         padding: 2rem !important;
-        border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        border: 1px solid rgba(255, 255, 255, 0.05) !important;
     }
     
     /* Force all sections to be transparent */
