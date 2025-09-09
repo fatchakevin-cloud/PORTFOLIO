@@ -1527,15 +1527,16 @@ nav.scrolled {
     margin-bottom: 60px;
 }
 
-.website-importance .section-title h2 {
-    font-size: 2.5rem;
-    color: var(--white);
-    margin-bottom: 20px;
-    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    font-weight: 700;
+.website-importance .title-icon {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.website-importance .title-icon i {
+    font-size: 5rem;
+    color: #3a86ff;
+    text-shadow: 0 0 30px rgba(58, 134, 255, 0.6);
+    animation: pulse 2s infinite;
 }
 
 .website-importance .section-title p {
@@ -1616,14 +1617,16 @@ nav.scrolled {
     border: 1px solid rgba(58, 134, 255, 0.2);
 }
 
-.cta-content h3 {
-    font-size: 2rem;
-    color: var(--white);
-    margin-bottom: 20px;
-    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+.cta-icon {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cta-icon i {
+    font-size: 4rem;
+    color: #3a86ff;
+    text-shadow: 0 0 20px rgba(58, 134, 255, 0.5);
+    animation: pulse 2s infinite;
 }
 
 .cta-content p {
@@ -1684,27 +1687,16 @@ nav.scrolled {
         padding: 60px 0;
     }
     
-    .website-importance .section-title h2 {
-        font-size: 2rem;
-        color: #ffffff !important;
-        text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.9) !important;
-        background: rgba(0, 0, 0, 0.7) !important;
-        padding: 1rem !important;
-        border-radius: 10px !important;
-        backdrop-filter: blur(5px) !important;
-        -webkit-backdrop-filter: blur(5px) !important;
-        font-weight: 700 !important;
+    .website-importance .title-icon {
+        text-align: center;
+        margin-bottom: 40px;
     }
     
-    .website-importance .section-title p {
-        color: #ffffff !important;
-        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9) !important;
-        background: rgba(0, 0, 0, 0.6) !important;
-        padding: 0.8rem !important;
-        border-radius: 8px !important;
-        backdrop-filter: blur(5px) !important;
-        -webkit-backdrop-filter: blur(5px) !important;
-        font-weight: 600 !important;
+    .website-importance .title-icon i {
+        font-size: 4rem;
+        color: #3a86ff;
+        text-shadow: 0 0 20px rgba(58, 134, 255, 0.5);
+        animation: pulse 2s infinite;
     }
     
     .importance-grid {
@@ -3650,26 +3642,16 @@ img[data-src] {
         background: transparent !important;
     }
     
-    .website-importance .section-title h2 {
-        background: rgba(0, 0, 0, 0.7) !important;
-        text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.9) !important;
-        color: #ffffff !important;
-        padding: 1rem !important;
-        border-radius: 10px !important;
-        backdrop-filter: blur(5px) !important;
-        -webkit-backdrop-filter: blur(5px) !important;
-        font-weight: 700 !important;
+    .website-importance .title-icon {
+        text-align: center;
+        margin-bottom: 40px;
     }
     
-    .website-importance .section-title p {
-        background: rgba(0, 0, 0, 0.6) !important;
-        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9) !important;
-        color: #ffffff !important;
-        padding: 0.8rem !important;
-        border-radius: 8px !important;
-        backdrop-filter: blur(5px) !important;
-        -webkit-backdrop-filter: blur(5px) !important;
-        font-weight: 600 !important;
+    .website-importance .title-icon i {
+        font-size: 4rem;
+        color: #3a86ff;
+        text-shadow: 0 0 20px rgba(58, 134, 255, 0.5);
+        animation: pulse 2s infinite;
     }
     
     /* Make all cards transparent */
