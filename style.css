@@ -1940,22 +1940,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: var(--dark);
-        flex-direction: column;
-        padding: 1.5rem;
-        gap: 1rem;
-        box-shadow: var(--shadow-lg);
-    }
-    
-    .nav-links.active {
-        display: flex;
-    }
+    /* Navigation supprimée - remplacée par la version toujours visible */
     
     .mobile-nav-toggle {
         display: block;
@@ -3094,23 +3079,7 @@ img[data-src] {
 
 /* Responsive Navigation - IDENTIQUE sur mobile et PC */
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: rgba(10, 10, 10, 0.98);
-        backdrop-filter: blur(20px);
-        flex-direction: column;
-        padding: 1rem;
-        border-top: 1px solid rgba(58, 134, 255, 0.2);
-        z-index: 1000;
-    }
-    
-    .nav-links.active {
-        display: flex;
-    }
+    /* Navigation supprimée - remplacée par la version toujours visible */
     
     .nav-link {
         width: 100%;
@@ -3334,6 +3303,8 @@ img[data-src] {
     /* Make hero section completely transparent */
     .hero {
         background: transparent !important;
+        background-color: transparent !important;
+        background-image: none !important;
     }
     
     .hero .container {
@@ -3497,6 +3468,16 @@ img[data-src] {
         background-color: transparent !important;
     }
     
+    /* FORCER LA NAVIGATION À ÊTRE VISIBLE */
+    .navbar-modern {
+        z-index: 1001 !important;
+        position: relative !important;
+    }
+    
+    .nav-container {
+        background: transparent !important;
+    }
+    
     /* FORCER LA VIDÉO À ÊTRE DERRIÈRE TOUT */
     .hero-video,
     .hero-video-bg {
@@ -3572,12 +3553,18 @@ img[data-src] {
         border: 1px solid rgba(255, 255, 255, 0.1);
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         z-index: 1000 !important;
+        width: auto !important;
+        height: auto !important;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
     }
 
     .nav-link {
-        width: 100%;
+        width: auto !important;
         justify-content: center;
-        padding: 1rem;
+        padding: 0.5rem 0.8rem !important;
+        font-size: 0.7rem !important;
         border-radius: 8px;
         margin-bottom: 0.5rem;
         color: var(--white) !important;
