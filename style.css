@@ -3147,7 +3147,7 @@ img[data-src] {
         background-position: center !important;
     }
     
-    /* Video fullscreen with object-fit: cover */
+    /* Video fullscreen with object-fit: cover - iPhone Safari fix */
     .hero-video {
         position: fixed !important;
         top: 0 !important;
@@ -3158,6 +3158,11 @@ img[data-src] {
         z-index: -1 !important;
         display: block !important;
         visibility: visible !important;
+        /* iPhone Safari specific fixes */
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
     }
     
     /* Force ALL other elements to be above video */
@@ -3310,47 +3315,52 @@ img[data-src] {
    Responsive Mobile
 ============================ */
 @media (max-width: 768px) {
-    /* Cacher le menu par défaut */
+    /* Navigation identique PC/mobile - iPhone Safari fix */
     .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 70%;
-        background: rgba(10, 10, 10, 0.95);
-        padding: 2rem 1.5rem;
-        border-radius: var(--radius-lg);
-        box-shadow: var(--shadow-2xl);
-        gap: 1.5rem;
-        text-align: right;
-    }
-
-    /* Quand actif */
-    .nav-links.active {
-        display: flex;
-        animation: slideDown 0.3s ease forwards;
-    }
-
-    @keyframes slideDown {
-        from {
-            opacity: 0;
-            transform: translateY(-20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    /* Bouton hamburger visible */
-    .mobile-nav-toggle {
-        display: block;
-        font-size: 2rem;
-        cursor: pointer;
-        color: var(--white);
+        display: flex !important;
+        flex-direction: row;
+        gap: 1rem;
+        position: static;
         background: none;
-        border: none;
-        z-index: 1100;
+        padding: 0;
+        box-shadow: none;
+        text-align: center;
+        justify-content: center;
+        width: auto;
+        flex-wrap: nowrap;
+    }
+
+    .nav-link {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.4rem;
+        border-radius: 0.3rem;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        transition: all 0.3s ease;
+        white-space: nowrap;
+    }
+
+    .nav-link:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateY(-2px);
+    }
+
+    /* Cacher le bouton contact sur mobile */
+    .btn-contact {
+        display: none;
+    }
+
+    /* Logo plus petit sur mobile */
+    .logo-text {
+        font-size: 1rem;
+    }
+
+    .logo-subtitle {
+        font-size: 0.6rem;
+    }
+
+    /* Navbar plus compacte */
+    .nav-container {
+        padding: 0.5rem 1rem;
     }
 }
