@@ -3234,7 +3234,7 @@ img[data-src] {
         left: 0 !important;
         width: 100vw !important;
         height: 100vh !important;
-        z-index: -999 !important;
+        z-index: -9999 !important;
         overflow: hidden !important;
         /* No fallback background - let video show */
         background: none !important;
@@ -3250,7 +3250,7 @@ img[data-src] {
         min-width: 140% !important;
         min-height: 140% !important;
         object-fit: cover !important;
-        z-index: -999 !important;
+        z-index: -9999 !important;
         display: block !important;
         visibility: visible !important;
         /* Force video to load and display */
@@ -3383,6 +3383,7 @@ img[data-src] {
         background: none !important;
         background-color: transparent !important;
         background-image: none !important;
+        z-index: 1 !important;
     }
     
     .website-importance::before,
@@ -3478,6 +3479,24 @@ img[data-src] {
     
     .container {
         background: transparent !important;
+    }
+    
+    /* FORCER LA VIDÉO À ÊTRE DERRIÈRE TOUT */
+    .hero-video,
+    .hero-video-bg {
+        z-index: -99999 !important;
+    }
+    
+    /* FORCER TOUS LES AUTRES ÉLÉMENTS À ÊTRE AU-DESSUS */
+    body,
+    nav,
+    section,
+    .container,
+    .hero-content,
+    .website-importance,
+    .footer {
+        z-index: 1 !important;
+        position: relative !important;
     }
 }
 
