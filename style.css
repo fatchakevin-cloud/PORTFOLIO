@@ -3256,6 +3256,9 @@ img[data-src] {
         /* Force video to load and display */
         opacity: 1 !important;
         pointer-events: none !important;
+        /* Force video to cover entire page */
+        transform: scale(1.1) !important;
+        -webkit-transform: scale(1.1) !important;
         /* iPhone 13 specific fixes */
         -webkit-transform: translateZ(0);
         -moz-transform: translateZ(0);
@@ -3314,6 +3317,24 @@ img[data-src] {
     .hero-content {
         background: transparent !important;
         z-index: 10 !important;
+    }
+    
+    /* Force ALL sections to be transparent on mobile */
+    section {
+        background: transparent !important;
+    }
+    
+    .container {
+        background: transparent !important;
+    }
+    
+    /* Make hero section completely transparent */
+    .hero {
+        background: transparent !important;
+    }
+    
+    .hero .container {
+        background: transparent !important;
     }
     
     /* Remove ALL backgrounds on mobile */
