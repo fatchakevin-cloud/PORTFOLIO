@@ -3465,7 +3465,7 @@ img[data-src] {
     /* RENDRE LE CONTENU TRANSPARENT POUR VOIR LA VIDÉO */
     .hero-content {
         background: transparent !important;
-        z-index: 10 !important;
+        z-index: 1 !important;
     }
     
     /* FORCER TOUTES LES SECTIONS À ÊTRE TRANSPARENTES */
