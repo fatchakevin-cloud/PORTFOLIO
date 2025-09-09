@@ -3397,12 +3397,6 @@ img[data-src] {
         -o-perspective: 1000;
         perspective: 1000;
         object-position: center center !important;
-        /* FORCER LE CHARGEMENT DE LA VIDÉO */
-        autoplay: true !important;
-        muted: true !important;
-        loop: true !important;
-        playsinline: true !important;
-        webkit-playsinline: true !important;
     }
     
     /* Force transparent background to show video - SEULEMENT sur la page d'accueil */
@@ -3535,14 +3529,7 @@ img[data-src] {
         pointer-events: none !important;
     }
     
-    /* FORCER LE CHARGEMENT DE LA VIDÉO */
-    video[autoplay] {
-        autoplay: true !important;
-        muted: true !important;
-        loop: true !important;
-        playsinline: true !important;
-        webkit-playsinline: true !important;
-    }
+    /* FORCER LE CHARGEMENT DE LA VIDÉO - Propriétés HTML gérées dans le HTML */
     
     /* FORCER LA VIDÉO À ÊTRE CHARGÉE ET VISIBLE - SOLUTION FINALE */
     .hero-video-bg video {
