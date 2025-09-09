@@ -494,11 +494,18 @@ nav.scrolled {
 
 .hero-description {
     font-size: 1.125rem;
-    color: var(--gray-300);
+    color: #ffffff;
     margin-bottom: 2rem;
     line-height: 1.7;
     max-width: 32rem;
     animation: slideUp 0.8s ease 0.8s both;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1.5rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .hero-buttons {
@@ -1463,10 +1470,12 @@ nav.scrolled {
 /* Website Importance Section */
 .website-importance {
     padding: 100px 0;
-    background: transparent;
+    background: rgba(0, 0, 0, 0.8);
     position: relative;
     overflow: hidden;
     z-index: 1;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
 }
 
 .website-importance::before {
@@ -1485,19 +1494,29 @@ nav.scrolled {
 
 .website-importance .section-title h2 {
     font-size: 2.5rem;
-    color: var(--white);
+    color: #ffffff;
     margin-bottom: 20px;
-    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
 }
 
 .website-importance .section-title p {
     font-size: 1.2rem;
-    color: var(--gray-300);
+    color: #ffffff;
     max-width: 600px;
     margin: 0 auto;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .importance-grid {
@@ -2149,6 +2168,14 @@ footer {
     
     .hero-description {
         font-size: 1.1rem;
+        background: rgba(0, 0, 0, 0.8) !important;
+        padding: 1.2rem !important;
+        border-radius: 12px !important;
+        backdrop-filter: blur(15px) !important;
+        -webkit-backdrop-filter: blur(15px) !important;
+        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9) !important;
+        border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        color: #ffffff !important;
     }
     
     .hero-badge {
